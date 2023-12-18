@@ -5,6 +5,19 @@ import {createTheme} from "@mui/material/styles"
 export const tokens =(mode) => ({
     ...(mode==="dark"
     ?{
+        violet: {
+            //red-violet
+            100: "#cf1585",
+            //mulberry
+            200: "#c54b8c",
+            //violet
+            300:"#ee82ee",
+            //african volet
+            400:"#b284be",
+            //slate blue
+            500: "#6a5acd"
+        },
+        
         grey: {
             100: "#e0e0e0",
             200: "#c2c2c2",
@@ -62,6 +75,19 @@ export const tokens =(mode) => ({
         },
     }
     :{
+        violet: {
+            //red-violet
+            100: "#cf1585",
+            //mulberry
+            200: "#c54b8c",
+            //violet
+            300:"#ee82ee",
+            //african volet
+            400:"#b284be",
+            //blue
+            500: "#6a5acd"
+        },
+       
         grey: {
             100: "#141414",
             200: "#292929",
@@ -134,7 +160,7 @@ export const themeSettings =(mode) => {
                    main: colors.primary[500], 
                 },
                 secondary: {
-                    main:colors.greenAccent[500],
+                    main:colors.violet[100],
                 },
                 neutral:{
                     dark:colors.grey[700],
@@ -150,7 +176,7 @@ export const themeSettings =(mode) => {
                     main: colors.primary[100], 
                  },
                  secondary: {
-                     main:colors.greenAccent[500],
+                     main:colors.violet[100],
                  },
                  neutral:{
                      dark:colors.grey[700],

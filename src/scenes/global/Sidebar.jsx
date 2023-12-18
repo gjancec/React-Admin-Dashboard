@@ -109,7 +109,7 @@ const Sidebar =() =>{
                 >
                   Some User
                 </Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]}>
+                <Typography variant="h5" color={colors.violet[100]}>
                   Admin
                 </Typography>
               </Box>

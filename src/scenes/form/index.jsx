@@ -85,7 +85,7 @@ return(
                             name="email"
                             error={!!touched.email && !!errors.email}
                             helperText={touched.email && errors.email}
-                            sx={{gridColumn: "span 2"}}
+                            sx={{gridColumn: "span 4"}}
 
                         />
                         <TextField
@@ -99,7 +99,7 @@ return(
                             name="contact"
                             error={!!touched.contact && !!errors.contact}
                             helperText={touched.contact && errors.contact}
-                            sx={{gridColumn: "span 2"}}
+                            sx={{gridColumn: "span 4"}}
 
                         />
                         <TextField
@@ -113,7 +113,7 @@ return(
                             name="address1"
                             error={!!touched.address1 && !!errors.address1}
                             helperText={touched.address1 && errors.address1}
-                            sx={{gridColumn: "span 2"}}
+                            sx={{gridColumn: "span 4"}}
 
                         />
                         <TextField
@@ -127,9 +127,14 @@ return(
                             name="address2"
                             error={!!touched.address2 && !!errors.address2}
                             helperText={touched.address2 && errors.address2}
-                            sx={{gridColumn: "span 2"}}
+                            sx={{gridColumn: "span 4"}}
 
                         />
+                    </Box>
+                    <Box display="flex" justifyContent="end" mt="20px">
+                       <Button type="submit" color="secondary" variant="contained">
+                        Create New User
+                        </Button> 
                     </Box>
                 </form>
             )}
