@@ -68,9 +68,10 @@ return (
               <ListItem
                 key={event.id}
                 sx={{
-                  backgroundColor: colors.greenAccent[500],
+                  backgroundColor: colors.violet[500],
                   margin: "10px 0",
                   borderRadius: "2px",
+                  font: "bold",
                 }}
               >
                 <ListItemText
@@ -89,7 +90,36 @@ return (
             ))}
           </List>
         </Box>
+{/*CALENDAR*/}
+<Box flex ="1 1 100%" ml="15px">
+  <FullCalendar 
+   height="75vh"
+   plugins={[
+    dayGridPlugin,
+    timeGridPlugin,
+    interactionPlugin,
+    listPlugin
+   ]}
+   headerToolbar={{
+    left: "prev,next today",
+    center: "title",
+    right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth"
+   }}
+   initialView="dayGridMonth"
+   editable={true}
+   selectable={true}
+   selectMirror={true}
+   dayMaxEvents={true}
+   select={handleDateClick}
+   eventClick={handleEventClick}
+   eventsSet={(events) => setCurrentEvents(events)}
+   initialEvents={[
+    {id: "1", title: "Event 1", date: "2023-12-20"},
+    {id: "2", title: "Event 2", date: "2024-01-03"},
+   ]}
 
+  />
+</Box>
         </Box> 
 </Box>
 )
