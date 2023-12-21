@@ -1,3 +1,3 @@
 # React Admin Dashboard
 
-Toggle between dark and light mode, MATERIAL UI, FullCalendar
+Toggle between dark and light mode, MATERIAL UI, FullCalendar, Nivo bar chart
