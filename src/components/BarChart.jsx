@@ -2,9 +2,9 @@ import {useTheme} from "@mui/material";
 import { ResponsiveBar } from "@nivo/bar";
 import { tokens } from "../theme";
 import {mockBarData as data} from "../data/mockData" 
-import { grey } from "@mui/material/colors";
 
-const BarChart = () => {
+
+const BarChart = ({isDashboard = false}) => {
 
     const theme =useTheme();
     const colors = tokens(theme.palette.mode);
@@ -14,7 +14,17 @@ const BarChart = () => {
         data={data}
         theme={{
             // added
-            
+            tooltip: {
+                container: {
+                    background: colors.grey[500],
+                    "fontSize": 12
+                },
+                "basic": {},
+                "chip": {},
+                "table": {},
+                "tableCell": {},
+                "tableCellValue": {}
+            },
             
             axis: {
               domain: {
@@ -44,12 +54,11 @@ const BarChart = () => {
             },
           }}
         keys={[
-            'hot dog',
-            'burger',
-            'sandwich',
-            'kebab',
-            'fries',
-            'donut'
+            'Tulip',
+            'Wisteria',
+            'Gardenia',
+            
+            'Rose'
         ]}
         indexBy="country"
         margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
@@ -80,13 +89,13 @@ const BarChart = () => {
         fill={[
             {
                 match: {
-                    id: 'fries'
+                    id: 'Wisteria'
                 },
                 id: 'dots'
             },
             {
                 match: {
-                    id: 'sandwich'
+                    id: 'Rose'
                 },
                 id: 'lines'
             }
@@ -106,7 +115,7 @@ const BarChart = () => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'country',
+            legend: isDashboard ? undefined : "country",
             legendPosition: 'middle',
             legendOffset: 32,
             truncateTickAt: 0
@@ -115,7 +124,7 @@ const BarChart = () => {
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'food',
+            legend: isDashboard ? undefined : 'flowers',
             legendPosition: 'middle',
             legendOffset: -40,
             truncateTickAt: 0
