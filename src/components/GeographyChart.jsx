@@ -34,12 +34,27 @@ const GeographyChart =({isDashboard = false}) =>{
                   fill: colors.grey[100],
                 },
               },
+             
             },
             legends: {
               text: {
                 fill: colors.grey[100],
               },
             },
+            "tooltip": {
+              "container": {
+                  "background": colors.grey[400],
+                  "fontSize": 12,
+                  text: {
+                      fill: colors.grey[100],
+                    },
+              },
+              "basic": {},
+              "chip": {},
+              "table": {},
+              "tableCell": {},
+              "tableCellValue": {}
+          }
           }}
         margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
         
